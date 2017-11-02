@@ -1,0 +1,119 @@
+
+/*
+ * Fonts
+ */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: normal;
+    src: local("Montserrat"), url(montserrat/Montserrat-Regular.otf) format("opentype");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-weight: bold;
+    src: local("Montserrat"), url(montserrat/Montserrat-Bold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: local("Montserrat"), url(montserrat/Montserrat-ExtraLight.otf) format("opentype");
+}
+
+/*
+ * Generic elements
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    background-color: rgb(76, 98, 129);
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+h1 {
+    font-size: 2.5em;
+}
+
+a {
+    color: white;
+}
+
+
+/*
+ * Generic classes
+ */
+
+.w-bold {
+    font-weight: bold;
+}
+.w-normal {
+    font-weight: normal;
+}
+.w-thin {
+    font-weight: 300;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-center-h {
+    justify-content: center;
+}
+.flex-center-v {
+    align-items: center;
+}
+
+.lead {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/*
+ * Jumbotron
+ */
+
+.jumbotron {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(56, 78, 119, 0.82);
+    padding: 7em 0;
+    color: #fff;
+}
+.jumbotron .title {
+    font-size: 7em;
+    margin: 0;
+}
+.jumbotron .headline {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.jumbotron-bg-image {
+    background-image: url(images/jumbotron_photo.jpg);
+    background-size: cover;
+    background-position: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .jumbotron {
+        padding: 3em 0;
+        font-size: .7em;
+    }
+}
