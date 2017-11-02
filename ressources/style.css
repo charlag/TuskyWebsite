@@ -1,54 +1,119 @@
-h1, h2 {
-  font-family: Verdana, Geneva, sans-serif;
-  color: white;
-  margin-left: 15px;
+
+/*
+ * Fonts
+ */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: normal;
+    src: local("Montserrat"), url(montserrat/Montserrat-Regular.otf) format("opentype");
 }
-h2 {
-    margin-top: .5em;
-    color: #d9e1e8;
+@font-face {
+    font-family: "Montserrat";
+    font-weight: bold;
+    src: local("Montserrat"), url(montserrat/Montserrat-Bold.otf) format("opentype");
 }
-h3 {
-    color: #d9e1e8;
-    margin-left: 15px;
-}
-p {
-  font-family: Verdana, Geneva, sans-serif;
-  margin: 15px 0 0 15px;
-  color: white;
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: local("Montserrat"), url(montserrat/Montserrat-ExtraLight.otf) format("opentype");
 }
 
-body {
-    background-color: #282c37;
-    padding-left: 20px;
-    padding-right: 20px;
+/*
+ * Generic elements
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    background-color: rgb(76, 98, 129);
+    color: #fff;
 }
 
-a:link {
-    text-decoration: none;
-    color: #2b90d9;
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+h1 {
+    font-size: 2.5em;
 }
 
-a:visited {
-    color: #56a7e1;
+a {
+    color: white;
 }
 
-a:hover {
-    color: #52a5e0;
+
+/*
+ * Generic classes
+ */
+
+.w-bold {
+    font-weight: bold;
+}
+.w-normal {
+    font-weight: normal;
+}
+.w-thin {
+    font-weight: 300;
 }
 
-.main {
-    text-align: center;
-    font-size: 5vw;
+.m-0 {
+    margin: 0;
 }
 
-.title {
-    text-align: center;
-    font-size: 8vw;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-center-h {
+    justify-content: center;
+}
+.flex-center-v {
+    align-items: center;
 }
 
-.screenshot {
-    width: 80%;
-    max-width: 500px;
+.lead {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 10px;
     margin: auto;
-    display: block;
+}
+
+/*
+ * Jumbotron
+ */
+
+.jumbotron {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(56, 78, 119, 0.82);
+    padding: 7em 0;
+    color: #fff;
+}
+.jumbotron .title {
+    font-size: 7em;
+    margin: 0;
+}
+.jumbotron .headline {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.jumbotron-bg-image {
+    background-image: url(images/jumbotron_photo.jpg);
+    background-size: cover;
+    background-position: 100%;
+}
+@media screen and (max-width: 1200px) {
+    .jumbotron {
+        padding: 3em 0;
+        font-size: .7em;
+    }
 }
